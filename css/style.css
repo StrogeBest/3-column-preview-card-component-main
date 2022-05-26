@@ -2,6 +2,7 @@
     --bright-orange: hsl(31, 77%, 52%);
     --dark-cyan: hsl(184, 100%, 22%);
     --very-dark-cyan: hsl(179, 100%, 13%);
+    --white: hsl(0, 0%, 100%);
 
     --font-big-shoulder-display: 'Big Shoulders Display', cursive;
     --font-lexend-deca: 'Lexend Deca', sans-serif;
@@ -23,4 +24,97 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
+    color: var(--white);
+    padding: 5.5rem 1.5rem;
+}
+
+.main{
+    width: 100%;
+    max-width: 57.5rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.card{
+    padding: 3rem;
+    height: 27.625rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+
+.card--orange{
+    background-color: var(--bright-orange);
+    border-radius: 6px 6px 0 0;
+}
+
+.card--cyan{
+    background-color: var(--dark-cyan);
+}
+
+.card--dark-cyan{
+    background-color: var(--very-dark-cyan);
+    border-radius: 0 0 6px 6px;
+}
+
+.card__title{
+    margin: 0;
+    font-family: var(--font-big-shoulder-display);
+    font-size: 2.5rem;
+}
+
+.card__paragraph{
+    margin: 0;
+    margin: 1.5rem 0;
+    font-family: var(--font-lexend-deca);
+    font-size: 0.9375rem;
+    line-height: 25px;
+}
+
+.card__button{
+    display: inline-block;
+    padding: 0.9375rem 2rem;
+    font-family: var(--font-lexend-deca);
+    font-size: 0.9375rem;
+    background-color: var(--white);
+    text-decoration: none;
+    border: 2px solid var(--white);
+    border-radius: 1.5rem;
+}
+
+.card__button--orange{
+    color: var(--bright-orange);
+}
+
+.card__button--cyan{
+    color: var(--dark-cyan);
+}
+
+.card__button--dark-cyan{
+    color: var(--very-dark-cyan);
+}
+
+@media screen and (min-width: 64rem) {
+    .main{
+        flex-direction: row;
+    }
+
+    .card{
+        height: 31.25rem;
+    }
+
+    .card--orange{
+        border-radius: 6px 0 0 6px;
+    }
+
+    .card--dark-cyan{
+        background-color: var(--very-dark-cyan);
+        border-radius: 0 6px 6px 0;
+    }
+
+    .card__button:hover{
+        background-color: transparent;
+        color: var(--white);
+    }
 }
